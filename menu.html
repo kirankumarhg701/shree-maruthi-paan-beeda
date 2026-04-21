@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu - Shrii Maruthi Pan Beeda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🍃 Our Menu</h1>
+
+<div class="container">
+
+    <!-- Pan -->
+    <div class="card">
+        <h2>🥬 Pan Varieties</h2>
+        <img src="images/pan.jpg">
+        <p>Sweet Pan</p>
+        <p>Karjura Pan</p>
+        <p>Mogaye Pan</p>
+        <button onclick="orderItem('Pan')">Order Now</button>
+    </div>
+
+    <!-- Drinks -->
+    <div class="card">
+        <h2>🥤 Welcome Drinks</h2>
+        <img src="images/drink.jpg">
+        <p>Fresh Welcome Drinks Available</p>
+        <button onclick="orderItem('Drinks')">Order Now</button>
+    </div>
+
+    <!-- Snacks -->
+    <div class="card">
+        <h2>🍟 Chats & Snacks</h2>
+        <img src="images/snacks.jpg">
+        <p>Variety of Chats & Snacks</p>
+        <button onclick="orderItem('Snacks')">Order Now</button>
+    </div>
+
+    <!-- Water -->
+    <div class="card">
+        <h2>💧 Water Bottles</h2>
+        <img src="images/water.jpg">
+        <p>500 ml to 20 Litres Available</p>
+        <button onclick="orderItem('Water')">Order Now</button>
+    </div>
+
+    <!-- Dairy -->
+    <div class="card">
+        <h2>🥛 Dairy Products</h2>
+        <img src="images/milk.jpg">
+        <p>Nandini Milk & Curd</p>
+        <button onclick="orderItem('Dairy')">Order Now</button>
+    </div>
+
+    <!-- Ice Cream -->
+    <div class="card">
+        <h2>🍦 Ice Cream</h2>
+        <img src="images/icecream.jpg">
+        <p>All Flavours Available</p>
+        <button onclick="orderItem('Ice Cream')">Order Now</button>
+    </div>
+
+    <!-- Fruits -->
+    <div class="card">
+        <h2>🍉 Fresh Items</h2>
+        <img src="images/fruits.jpg">
+        <p>Cut Fruits, Milk Shakes, Crushed Fruits</p>
+        <button onclick="orderItem('Fruits')">Order Now</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<h2>🛒 Your Cart</h2>
+<ul id="cart"></ul>
+
+<h3>Total: ₹<span id="total">0</span></h3>
+
+<button onclick="clearCart()">Clear Cart</button>
+<button onclick="addToCart('Sweet Pan', 10)">Order</button>
+<button onclick="addToCart('Karjura Pan', 15)">Order</button>
+<button onclick="addToCart('Mogaye Pan', 20)">Order</button>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+<h1>Login</h1>
+
+<input type="text" id="username" placeholder="Username"><br><br>
+<input type="password" id="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Login</button>
+
+<script>
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if (user === "admin" && pass === "1234") {
+        localStorage.setItem("user", user);
+        alert("Login Successful!");
+        window.location.href = "menu.html";
+    } else {
+        alert("Invalid Login");
+    }
+}
+</script>
+
+</body>
+</html>
